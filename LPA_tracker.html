@@ -466,10 +466,6 @@
     table { font-size: 12px; }
     thead th, tbody td { padding: 7px 8px; }
 
-    select { font-size: 11px; padding: 4px 6px; }
-    input[type=text] { max-width: 120px; font-size: 11px; }
-    textarea.note-input { min-width: 100px; font-size: 11px; }
-
     .domain-footer { padding: 8px 14px 10px; }
     .domain-footer > div { flex-wrap: wrap; gap: 6px; }
 
@@ -503,8 +499,6 @@
     .check-item { font-size: 11px; gap: 4px; }
     .check-item input[type=checkbox] { width: 13px; height: 13px; }
 
-    select { font-size: 11px; padding: 3px 5px; max-width: 130px; }
-
     .domain-header { padding: 10px 12px; }
     .domain-title { font-size: 12px; line-height: 1.3; }
     .badge { font-size: 10px; padding: 2px 7px; }
@@ -520,6 +514,16 @@
   @media (max-width: 768px) {
     .table-scroll { margin: 0 -1px; }
   }
+
+
+  /* ── Table fixed-width: always scroll, never squish ── */
+  .table-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  .table-scroll table { min-width: 620px; }
+  thead th { white-space: nowrap; }
+  .col-num { width: 36px; min-width: 36px; }
+  .status-cell { min-width: 160px; }
+  input[type=text] { min-width: 110px; }
+  textarea.note-input { min-width: 130px; }
 
 </style>
 </head>
